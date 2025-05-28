@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Customer Feedback Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .form-container {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 500px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin: 10px 0 5px;
+    }
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      resize: vertical;
+    }
+    textarea {
+      height: 100px;
+    }
+    input[type="submit"] {
+      margin-top: 20px;
+      background-color: #0070d2;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      width: 100%;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    input[type="submit"]:hover {
+      background-color: #005fb2;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Customer Feedback</h2>
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00DNS00000LMIS1" method="POST">
+      
+      <input type="hidden" name="orgid" value="00DNS00000LMIS1">
+      <input type="hidden" name="retURL" value="http://google.com">
+
+      <!-- Debugging fields (optional) -->
+      <!-- 
+      <input type="hidden" name="debug" value="1">
+      <input type="hidden" name="debugEmail" value="krishnaasawa45@gmail.com">
+      -->
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="text" maxlength="80" required>
+
+      <label for="00NNS00001fFAOj">Booking ID</label>
+      <input id="00NNS00001fFAOj" name="00NNS00001fFAOj" type="text" maxlength="12" required>
+
+      <label for="00NNS00001fFFuf">Feedback</label>
+      <textarea id="00NNS00001fFFuf" name="00NNS00001fFFuf" wrap="soft" required></textarea>
+
+      <input type="submit" name="submit" value="Submit Feedback">
+    </form>
+  </div>
+
+</body>
+</html>
