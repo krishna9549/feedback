@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+  <title>Submit a Case - Hotel Booking Support</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f8;
+      padding: 40px;
+    }
+    .form-container {
+      max-width: 500px;
+      margin: auto;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input[type="text"],
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+    input[type="submit"] {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      background-color: #0070d2;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #005fb2;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Submit a Case</h2>
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00DNS00000LMIS1" method="POST">
+      <input type="hidden" name="orgid" value="00DNS00000LMIS1">
+      <input type="hidden" name="retURL" value="http://letcode/asawakrishna2/">
+
+      <!-- Optional Debug -->
+      <!--
+      <input type="hidden" name="debug" value="1">
+      <input type="hidden" name="debugEmail" value="krishnaasawa45@gmail.com">
+      -->
+
+      <label for="00NNS00001fFAOj">Booking ID</label>
+      <input id="00NNS00001fFAOj" maxlength="12" name="00NNS00001fFAOj" size="20" type="text" placeholder="Enter your Booking ID" required>
+
+      <label for="reason">Case Reason</label>
+      <select id="reason" name="reason" required>
+        <option value="">--Select Reason--</option>
+        <option value="Installation">Installation</option>
+        <option value="Equipment Complexity">Equipment Complexity</option>
+        <option value="Performance">Performance</option>
+        <option value="Breakdown">Breakdown</option>
+        <option value="Equipment Design">Equipment Design</option>
+        <option value="Feedback">Feedback</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <input type="submit" name="submit" value="Submit Case">
+    </form>
+  </div>
+
+</body>
+</html>
