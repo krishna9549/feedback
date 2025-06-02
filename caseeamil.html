@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hotel Case Form</title>
+  <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f0f4ff, #e0eafc);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    form {
+      background: white;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 100%;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin: 15px 0 5px;
+      color: #555;
+      font-weight: 500;
+    }
+
+    input[type="text"],
+    select {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+
+    input[type="submit"] {
+      margin-top: 20px;
+      width: 100%;
+      background-color: #0066cc;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #005bb5;
+    }
+  </style>
+</head>
+<body>
+
+  <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00DNS00000LMIS1" method="POST">
+    <h2>Submit a Case</h2>
+
+    <input type="hidden" name="orgid" value="00DNS00000LMIS1">
+    <input type="hidden" name="retURL" value="http://google.com">
+
+    <!-- Debugging (optional) -->
+    <!-- 
+    <input type="hidden" name="debug" value=1>
+    <input type="hidden" name="debugEmail" value="krishnaasawa45@gmail.com"> 
+    -->
+
+    <label for="00NNS00001fFAOj">Booking ID</label>
+    <input id="00NNS00001fFAOj" maxlength="12" name="00NNS00001fFAOj" size="20" type="text" required />
+
+    <label for="reason">Case Reason</label>
+    <select id="reason" name="reason" required>
+      <option value="">--None--</option>
+      <option value="Installation">Installation</option>
+      <option value="Equipment Complexity">Equipment Complexity</option>
+      <option value="Performance">Performance</option>
+      <option value="Breakdown">Breakdown</option>
+      <option value="Equipment Design">Equipment Design</option>
+      <option value="Feedback">Feedback</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <input type="submit" name="submit" value="Submit Case">
+  </form>
+
+</body>
+</html>
