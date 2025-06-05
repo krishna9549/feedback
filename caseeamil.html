@@ -65,6 +65,33 @@
       background-color: #005bb5;
     }
   </style>
+  <script>
+
+    // Extract query parameter by name
+
+    function getQueryParam(name) {
+
+      const urlParams = new URLSearchParams(window.location.search);
+
+      return urlParams.get(name);
+
+    }
+ 
+    // Fill Booking Number field if URL param exists
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+      const bookingId = getQueryParam('bookingId');
+
+      if (bookingId) {
+
+        document.getElementById('00NgK000012dRt7').value = bookingId;
+
+      }
+
+    });
+</script>
+ 
 </head>
 <body>
 
@@ -99,15 +126,5 @@
   </form>
 
 </body>
-  <script>
-  const urlParams = new URLSearchParams(window.location.search);
-  const bookingId = urlParams.get('bookingid');
-
-  if (bookingId) {
-    const inputField = document.getElementById('00NNS00001fFAOj');
-    if (inputField) {
-      inputField.value = bookingId;
-    }
-  }
-</script>
+ 
 </html>
