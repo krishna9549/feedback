@@ -80,9 +80,9 @@
     <input type="hidden" name="debugEmail" value="krishnaasawa45@gmail.com"> 
     -->
 
-    <label for="00NNS00001fFAOj">Booking ID</label>
-    <input id="00NNS00001fFAOj" maxlength="12" name="00NNS00001fFAOj" size="20" type="text" required />
-
+ <label for="00NNS00001fFAOj">Booking ID</label>
+<input id="00NNS00001fFAOj" maxlength="12" name="00NNS00001fFAOj" size="20" type="text" required />
+    
     <label for="reason">Case Reason</label>
     <select id="reason" name="reason" required>
       <option value="">--None--</option>
@@ -99,4 +99,15 @@
   </form>
 
 </body>
+  <script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const bookingId = urlParams.get('bookingid');
+
+  if (bookingId) {
+    const inputField = document.getElementById('00NNS00001fFAOj');
+    if (inputField) {
+      inputField.value = bookingId;
+    }
+  }
+</script>
 </html>
